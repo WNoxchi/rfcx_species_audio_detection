@@ -1,3 +1,7 @@
+statistics/*
+sample_data/*
+data/*
+temp/*
 *.bak
 .gitattributes
 .last_checked
