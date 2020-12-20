@@ -1,1 +1,1 @@
-{"n_fft": 2048, "hop_length": 512, "n_mels": 256, "mel_n_fft_override": null, "mel_hop_length_override": null, "path": "/Users/jupyter/data", "audio_folders": ["train", "test"], "codecs": [".flac"]}
+{"n_fft": 2048, "hop_length": 512, "n_mels": 256, "mel_n_fft_override": null, "mel_hop_length_override": null, "path": "/home/jupyter/data", "audio_folders": ["train", "test"], "codecs": [".flac"], "serial": false}
