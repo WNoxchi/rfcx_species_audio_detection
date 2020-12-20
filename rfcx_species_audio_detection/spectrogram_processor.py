@@ -2,7 +2,7 @@
 
 __all__ = ['parser', 'args', 'fpath', 'num_cpus', 'serial', 'n_fft', 'hop_length', 'n_mels', 'mel_n_fft',
            'mel_hop_length', 'compute_spectrogram', 'compute_mel_spectrogram', 'write_spectrogram',
-           'load_compute_write', 'extratext', 'path', 'path_spgm_frq', 'path_spgm_mel', 'audio_files']
+           'load_compute_write', 'extratext', 't', 'path', 'path_spgm_frq', 'path_spgm_mel', 'audio_files']
 
 # Cell
 import argparse
@@ -87,11 +87,11 @@ def load_compute_write(audio_file, diagnostic_suffix="", **kwargs):
 #     return {'audio_file':audio_file.stem,'spgm_frq':spgm_frq,'spgm_mel':spgm_mel}
 
 # Cell
-# t = time.time()
-
-# Cell
 extratext = [f" with {num_cpus} core{['','s'][num_cpus>1]}",""][serial]
 print(f"Parallelization {['ON','OFF'][serial]}{extratext}.")
+
+# Cell
+t = time.time()
 
 # Cell
 path = Path(parameters['path'])
@@ -121,7 +121,6 @@ if serial:
 else:
     _ = parallel(load_compute_write, audio_files,
             **{'n_fft':n_fft,'hop_length':hop_length,'n_mels':n_mels}, threadpool=True, n_workers = num_cpus)
-
 
 # Cell
 print(f"\n{len(audio_files)} files processed in {time.strftime('%H:%M:%S', time.gmtime(time.time() - t))}")
