@@ -2,8 +2,11 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"compute_spectrogram": "01_spectrogram_processor.ipynb",
-         "compute_mel_spectrogram": "01_spectrogram_processor.ipynb",
+index = {"display_image_tensor": "00_utils.ipynb",
+         "display_detection_window_waveform": "00_utils.ipynb",
+         "df_subset_rows": "00_utils.ipynb",
+         "get_annotation_length": "00_utils.ipynb",
+         "find_longest_annotations": "00_utils.ipynb",
          "parser": "01_spectrogram_processor.ipynb",
          "args": "01_spectrogram_processor.ipynb",
          "fpath": "01_spectrogram_processor.ipynb",
@@ -14,16 +17,19 @@ index = {"compute_spectrogram": "01_spectrogram_processor.ipynb",
          "n_mels": "01_spectrogram_processor.ipynb",
          "mel_n_fft": "01_spectrogram_processor.ipynb",
          "mel_hop_length": "01_spectrogram_processor.ipynb",
+         "frq": "01_spectrogram_processor.ipynb",
+         "mel": "01_spectrogram_processor.ipynb",
+         "compute_spectrogram": "01_spectrogram_processor.ipynb",
+         "compute_mel_spectrogram": "01_spectrogram_processor.ipynb",
          "write_spectrogram": "01_spectrogram_processor.ipynb",
          "load_compute_write": "01_spectrogram_processor.ipynb",
-         "extratext": "01_spectrogram_processor.ipynb",
+         "spgmtext": "01_spectrogram_processor.ipynb",
+         "cputext": "01_spectrogram_processor.ipynb",
          "t": "01_spectrogram_processor.ipynb",
          "path": "01_spectrogram_processor.ipynb",
          "path_spgm_frq": "01_spectrogram_processor.ipynb",
          "path_spgm_mel": "01_spectrogram_processor.ipynb",
-         "audio_files": "01_spectrogram_processor.ipynb",
-         "display_detection_window_waveform": "experiments - waveform analysis.ipynb",
-         "get_annotation_length": "experiments - waveform analysis.ipynb"}
+         "audio_files": "01_spectrogram_processor.ipynb"}
 
 modules = ["utils.py",
            "spectrogram_processor.py"]
