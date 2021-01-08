@@ -16,6 +16,7 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module=r'librosa'
 
 # Cell
 def display_image_tensor(x, figsize=None, savename=None):
+    x = x.cpu()
     xn = x.numpy() if len(x.shape)==3 else x.numpy()[0] # handles single-item batches and item-only tensors
     xn = np.moveaxis(xn, 0, 2)
     xn = xn + abs(xn.min()) if xn.min() < 0.0 else xn
