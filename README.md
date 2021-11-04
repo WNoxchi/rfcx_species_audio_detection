@@ -64,7 +64,7 @@ Constant α (0.5) with soft labels from two samples. Slightly diminishes FP logl
 
 ### Validation
 
-The 2nd place solution didn't find a strong link between validation and public leaderboard score. He opted not to use checkpoints and instead tuned 60 epochs (at 200 batches/epoch) with [CosineLR](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html) and the [AdamW optimizer](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html).
+The 2nd place solution didn't find a strong link between validation and public leaderboard score. It doesn't use checkpoints and instead tunes 60 epochs (at 200 batches/epoch) with [CosineLR](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html) and the [AdamW optimizer](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html).
 
 ### Ensemble
 
